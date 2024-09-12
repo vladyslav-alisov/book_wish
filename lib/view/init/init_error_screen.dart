@@ -1,8 +1,9 @@
+import 'package:easy_book/const/assets.gen.dart';
+import 'package:easy_book/l10n/translate_extension.dart';
+import 'package:easy_book/router/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:template/const/assets.gen.dart';
-import 'package:template/router/app_routes.dart';
 
 class InitErrorScreen extends StatelessWidget {
   const InitErrorScreen({
@@ -33,7 +34,7 @@ class InitErrorScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => context.go(AppRoutes.init.path),
-              child: Text("Try again"),
+              child: Text(context.l10n.tryAgain),
             ),
           ],
         ),

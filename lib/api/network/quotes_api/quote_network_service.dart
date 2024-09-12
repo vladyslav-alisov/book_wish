@@ -1,5 +1,5 @@
-import 'package:template/api/network/quotes_api/quote_dto.dart';
-import 'package:template/api/network/quotes_api/quotes_client.dart';
+import 'package:easy_book/api/network/quotes_api/quote_dto.dart';
+import 'package:easy_book/api/network/quotes_api/quotes_client.dart';
 
 class QuoteService {
   static final QuotesApiClient _quotesClient = QuotesApiClient.instance;

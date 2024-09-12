@@ -1,11 +1,12 @@
+import 'package:easy_book/api/database/database_client.dart';
+import 'package:easy_book/api/secure_storage/storage_client.dart';
+import 'package:easy_book/models/app_config/app_config.dart';
+import 'package:easy_book/models/app_info/app_info.dart';
+import 'package:easy_book/repositories/app_repository.dart';
+import 'package:easy_book/utils/app_env.dart';
+import 'package:easy_book/view/app_error.dart';
 import 'package:flutter/material.dart';
-import 'package:template/api/database/database_client.dart';
-import 'package:template/api/secure_storage/storage_client.dart';
-import 'package:template/models/app_config/app_config.dart';
-import 'package:template/models/app_info/app_info.dart';
-import 'package:template/repositories/app_repository.dart';
-import 'package:template/utils/app_env.dart';
-import 'package:template/view/app_error.dart';
+
 import 'view/app.dart';
 
 const String appStoreUrl = "https://apps.apple.com/tr/app/flickermail/id6476929326";

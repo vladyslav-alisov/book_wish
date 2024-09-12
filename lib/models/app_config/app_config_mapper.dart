@@ -1,6 +1,6 @@
+import 'package:easy_book/api/database/app_config_api/app_config_entity.dart';
+import 'package:easy_book/models/app_config/app_config.dart';
 import 'package:flutter/material.dart';
-import 'package:template/api/database/app_config_api/app_config_entity.dart';
-import 'package:template/models/app_config/app_config.dart';
 
 class AppConfigMapper {
   AppConfigEntity modelToEntity(AppConfig appConfig) {

@@ -1,12 +1,13 @@
 import 'dart:io';
+
+import 'package:easy_book/const/assets.gen.dart';
+import 'package:easy_book/l10n/translate_extension.dart';
+import 'package:easy_book/main.dart';
+import 'package:easy_book/providers/app_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:template/const/assets.gen.dart';
-import 'package:template/l10n/translate_extension.dart';
-import 'package:template/main.dart';
-import 'package:template/providers/app_provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -38,7 +39,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   void initState() {
     super.initState();
-
     _selectedLocale = _appProvider.appLocale;
     _selectedThemeMode = _appProvider.themeMode;
     _supportedLocales.addAll(AppLocalizations.supportedLocales);
@@ -77,7 +77,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       applicationVersion: _appProvider.appInfo.version,
       children: [
         Text(
-          "The Flutter template app provides developers with a robust starting point for creating cross-platform mobile applications. It includes essential features, modules, and architectural patterns that streamline the app development process.",
+          context.l10n.aboutAppText,
         )
       ],
       applicationIcon: SizedBox(

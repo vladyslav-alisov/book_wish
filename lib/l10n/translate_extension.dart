@@ -8,8 +8,8 @@ extension TranslateExtension on BuildContext {
 const Map<String, String> codeToName = {
   "en": "English",
   "es": "Español",
-  "ru": "Русский",
   "tr": "Türkçe",
+  "ru": "Русский",
 };
 
 extension FullName on Locale {
@@ -17,3 +17,10 @@ extension FullName on Locale {
     return codeToName[languageCode] ?? "Unknown";
   }
 }
+
+const supportedLocale = const [
+  Locale('en'), // English
+  Locale('es'), // Spanish
+  Locale('tr'),
+  Locale('ru'),
+];

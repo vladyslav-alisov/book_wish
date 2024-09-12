@@ -10,5 +10,19 @@
   "about": "About",
   "share": "Share",
   "error": "Error",
-  "shareApp": "Share app"
+  "shareApp": "Share app",
+  "aboutAppText": "Welcome to Book Wish, your ultimate reading companion! With Book Wish, you can effortlessly search for books by title, author, or genre and check their ratings and reviews to find your next great read. Filter your search to discover books by your favorite authors or within specific genres. Save intriguing books to your wishlist and mark them as 'Already read' once you’ve finished. Book Wish helps you keep track of your reading journey and manage your book collection with ease. Discover, track, and enjoy your reading like never before. Download Book Wish today and start exploring your next favorite book!",
+  "loadingYourData": "Loading your data...",
+  "tryAgain":"Try again",
+  "sorryWeCouldNotFindResultsForYourSearch": "Sorry, we could not find any results for your search. Please check the spelling or try another search term.",
+  "yourReadBooksWillShowUpHereOnce": "Your read books will show up here once you mark some as read. Start reading and keep track of your progress!",
+  "youHaveNotAddedAnyBooksToYourFavoriteYet": "You haven not added any books to your favorites yet. Find a book you love and tap the heart to add it here.",
+  "favoriteBooks":"Favorite books",
+  "readBooks": "Read books",
+  "author": "Author",
+  "filter": "Filter",
+  "genre": "Genre",
+  "search": "Search",
+  "alreadyRead": "Already read",
+  "favorite": "Favorite"
 }

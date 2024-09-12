@@ -1,6 +1,6 @@
+import 'package:easy_book/api/database/app_info_api/app_info_entity.dart';
+import 'package:easy_book/models/app_info/app_info.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:template/api/database/app_info_api/app_info_entity.dart';
-import 'package:template/models/app_info/app_info.dart';
 
 class AppInfoMapper {
   static AppInfo dtoToModel(PackageInfo packageInfo) {

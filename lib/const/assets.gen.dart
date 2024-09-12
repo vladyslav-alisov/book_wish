@@ -18,18 +18,58 @@ class $AssetsAnimationsGen {
   /// File path: assets/animations/init_loading.json
   String get initLoading => 'assets/animations/init_loading.json';
 
+  /// File path: assets/animations/loading.json
+  String get loading => 'assets/animations/loading.json';
+
+  /// File path: assets/animations/no_data.json
+  String get noData => 'assets/animations/no_data.json';
+
+  /// File path: assets/animations/on_boarding_1.json
+  String get onBoarding1 => 'assets/animations/on_boarding_1.json';
+
+  /// File path: assets/animations/on_boarding_2.json
+  String get onBoarding2 => 'assets/animations/on_boarding_2.json';
+
+  /// File path: assets/animations/on_boarding_3.json
+  String get onBoarding3 => 'assets/animations/on_boarding_3.json';
+
   /// List of all assets
-  List<String> get values => [error, initLoading];
+  List<String> get values => [
+        error,
+        initLoading,
+        loading,
+        noData,
+        onBoarding1,
+        onBoarding2,
+        onBoarding3
+      ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/logo copy.png
+  AssetGenImage get logoCopy =>
+      const AssetGenImage('assets/images/logo copy.png');
+
+  /// File path: assets/images/logo-bg-removed.png
+  AssetGenImage get logoBgRemoved =>
+      const AssetGenImage('assets/images/logo-bg-removed.png');
+
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
+  /// File path: assets/images/logo_1024.jpeg
+  AssetGenImage get logo1024 =>
+      const AssetGenImage('assets/images/logo_1024.jpeg');
+
+  /// File path: assets/images/logo_512.jpeg
+  AssetGenImage get logo512 =>
+      const AssetGenImage('assets/images/logo_512.jpeg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [logo];
+  List<AssetGenImage> get values =>
+      [logoCopy, logoBgRemoved, logo, logo1024, logo512];
 }
 
 class Assets {
@@ -37,10 +77,11 @@ class Assets {
 
   static const String aEnv = '.env';
   static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
+  static const String backup = 'assets/backup.isar';
   static const $AssetsImagesGen images = $AssetsImagesGen();
 
   /// List of all assets
-  static List<String> get values => [aEnv];
+  static List<String> get values => [aEnv, backup];
 }
 
 class AssetGenImage {

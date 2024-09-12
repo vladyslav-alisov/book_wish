@@ -1,5 +1,5 @@
+import 'package:easy_book/api/database/app_config_api/app_config_entity.dart';
 import 'package:isar/isar.dart';
-import 'package:template/api/database/app_config_api/app_config_entity.dart';
 
 class AppConfigDao {
   final Isar _isar;

@@ -1,5 +1,5 @@
+import 'package:easy_book/api/database/app_info_api/app_info_entity.dart';
 import 'package:isar/isar.dart';
-import 'package:template/api/database/app_info_api/app_info_entity.dart';
 
 class AppInfoDao {
   final Isar _isar;

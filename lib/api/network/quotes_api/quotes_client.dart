@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:template/utils/app_env.dart';
+import 'package:easy_book/utils/app_env.dart';
 
 class QuotesApiClient {
   QuotesApiClient._();

@@ -1,10 +1,12 @@
+import 'package:easy_book/models/book/book.dart';
+import 'package:easy_book/router/app_routes.dart';
+import 'package:easy_book/view/home/details_screen.dart';
+import 'package:easy_book/view/home/home_screen.dart';
+import 'package:easy_book/view/init/init_error_screen.dart';
+import 'package:easy_book/view/init/init_screen.dart';
+import 'package:easy_book/view/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template/router/app_routes.dart';
-import 'package:template/view/home/home_screen.dart';
-import 'package:template/view/init/init_error_screen.dart';
-import 'package:template/view/init/init_screen.dart';
-import 'package:template/view/settings/settings_screen.dart';
 
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -30,6 +32,14 @@ class AppRouter {
         GoRoute(
           path: AppRoutes.home.path,
           builder: (context, state) => const HomeScreen(),
+          routes: [
+            GoRoute(
+              path: AppRoutes.details.name,
+              builder: (context, state) => DetailsScreen(
+                book: state.extra as Book,
+              ),
+            ),
+          ],
         ),
         GoRoute(
           path: AppRoutes.settings.path,

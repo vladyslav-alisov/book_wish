@@ -1,8 +1,12 @@
+import 'package:easy_book/const/assets.gen.dart';
+import 'package:easy_book/l10n/translate_extension.dart';
+import 'package:easy_book/providers/app_provider.dart';
+import 'package:easy_book/view/home/home_screen.dart';
+import 'package:easy_book/view/init/init_error_screen.dart';
+import 'package:easy_book/view/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:template/const/assets.gen.dart';
-import 'package:template/router/app_routes.dart';
+import 'package:provider/provider.dart';
 
 class InitScreen extends StatefulWidget {
   const InitScreen({super.key});
@@ -12,26 +16,26 @@ class InitScreen extends StatefulWidget {
 }
 
 class _InitScreenState extends State<InitScreen> {
+  AppProvider get _appProvider => context.read<AppProvider>();
+
   @override
   void initState() {
     super.initState();
-    _initData()
-        .then(
-          (_) => context.go(AppRoutes.home.path),
-        )
-        .onError(
-          (error, stackTrace) => context.go(
-            AppRoutes.initError.path,
-            extra: error,
-          ),
-        );
+    _initData();
   }
 
   Future<void> _initData() async {
-    await Future.delayed(
-      Duration(seconds: 2),
-      () => print("Init completed"),
-    );
+    await Future.delayed(const Duration(seconds: 2));
+    if (!mounted) return;
+    try {
+      if (_appProvider.isFirstLaunch) {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnboardingScreen()));
+      } else {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+      }
+    } catch (e) {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => InitErrorScreen(error: e)));
+    }
   }
 
   @override
@@ -48,7 +52,7 @@ class _InitScreenState extends State<InitScreen> {
             ),
             const SizedBox(height: 20),
             Text(
-              "Loading your data...",
+              context.l10n.loadingYourData,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
